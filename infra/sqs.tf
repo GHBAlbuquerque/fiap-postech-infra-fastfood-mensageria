@@ -22,4 +22,5 @@ resource "aws_sqs_queue" "dead_letter_queue" {
   name                       = lookup(each.value, "name", null) == null ? "${each.key}-deadletter" : "${lookup(each.value, "name")}-deadletter"
   message_retention_seconds  = lookup(each.value, "message_retention_seconds", null)
   visibility_timeout_seconds = lookup(each.value, "visibility_timeout_seconds", null)
+  fifo_queue                 = lookup(each.value, "fifo_queue", null)
 }
