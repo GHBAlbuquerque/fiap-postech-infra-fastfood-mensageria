@@ -1,6 +1,6 @@
 resource "aws_sqs_queue" "queue" {
   for_each                   = var.sqs_queues
-  name                       = lookup(each.value, "name", null) == null ? each.key : lookup(each.value, "name")
+  name                       = lookup(each.value, "name", null) == null ? each.key :"${lookup(each.value, "name")}${lookup(each.value, "suffix")}"
   delay_seconds              = lookup(each.value, "delay_seconds", null)
   message_retention_seconds  = lookup(each.value, "message_retention_seconds", null)
   receive_wait_time_seconds  = lookup(each.value, "receive_wait_time_seconds", null)

@@ -11,6 +11,7 @@ sqs_queues   = {
     receive_wait_time_seconds  = 60
     visibility_timeout_seconds = 45
     fifo_queue                 = true
+    suffix                     = ".fifo"
 
     create_deadletter = true
     maxReceiveCount   = 5
@@ -23,6 +24,7 @@ sqs_queues   = {
     receive_wait_time_seconds  = 60
     visibility_timeout_seconds = 45
     fifo_queue                 = true
+    suffix                     = ".fifo"
 
     create_deadletter = true
     maxReceiveCount   = 5
@@ -35,6 +37,7 @@ sqs_queues   = {
     receive_wait_time_seconds  = 60
     visibility_timeout_seconds = 45
     fifo_queue                 = true
+    suffix                     = ".fifo"
 
     create_deadletter = true
     maxReceiveCount   = 5
@@ -47,6 +50,7 @@ sqs_queues   = {
     receive_wait_time_seconds  = 60
     visibility_timeout_seconds = 45
     fifo_queue                 = true
+    suffix                     = ".fifo"
 
     create_deadletter = true
     maxReceiveCount   = 5
@@ -59,6 +63,7 @@ sqs_queues   = {
     receive_wait_time_seconds  = 60
     visibility_timeout_seconds = 45
     fifo_queue                 = true
+    suffix                     = ".fifo"
 
     create_deadletter = true
     maxReceiveCount   = 5
@@ -71,6 +76,7 @@ sqs_queues   = {
     receive_wait_time_seconds  = 60
     visibility_timeout_seconds = 45
     fifo_queue                 = true
+    suffix                     = ".fifo"
 
     create_deadletter = true
     maxReceiveCount   = 5
@@ -83,6 +89,7 @@ sqs_queues   = {
     receive_wait_time_seconds  = 60
     visibility_timeout_seconds = 45
     fifo_queue                 = true
+    suffix                     = ".fifo"
 
     create_deadletter = true
     maxReceiveCount   = 5
