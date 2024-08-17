@@ -14,7 +14,7 @@ data "aws_iam_policy_document" "queue_policy_document" {
 }
 
 resource "aws_sqs_queue_policy" "queue_policy" {
-
-  queue_url = aws_sqs_queue.queue.*.id
+  for_each  = aws_sqs_queue.queue
+  queue_url = each.value.id
   policy    = data.aws_iam_policy_document.queue_policy_document.json
 }
