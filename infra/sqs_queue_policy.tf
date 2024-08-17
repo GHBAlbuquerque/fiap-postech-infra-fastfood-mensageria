@@ -1,7 +1,6 @@
 data "aws_iam_policy_document" "queue_policy_document" {
-  for_each = var.sqs_queues
   statement {
-    sid    = lookup(each.value, "delay_seconds", null)
+    sid    = "SQS Queue Policy"
     effect = "Allow"
 
     principals {
@@ -10,7 +9,7 @@ data "aws_iam_policy_document" "queue_policy_document" {
     }
 
     actions   = ["sqs:SendMessage"]
-    resources = [aws_sqs_queue.queue.*.arn]
+    resources = ["*"]
   }
 }
 
