@@ -134,5 +134,19 @@ sqs_queues   = {
     maxReceiveCount   = 5
   }
 
+  dev_teste= {
+    name                       = "queue_dev_teste"
+    delay_seconds              = 0
+    message_retention_seconds  = 345600
+    receive_wait_time_seconds  = 10
+    visibility_timeout_seconds = 300
+    fifo_queue                 = true
+    suffix                     = ".fifo"
+
+    create_deadletter = true
+    maxReceiveCount   = 5
+  }
+
+
 
 }
